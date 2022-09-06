@@ -73,9 +73,11 @@ class ViewController: UIViewController {
         guard let temperature = Double(tf_valor.text!) else {return}
         
         if bt_celsius.alpha == 1.0 {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Farenheint"
             lb_resultado.text = String(temperature * 1.8 + 32.0)
         } else {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Celsius"
             lb_resultado.text = String((temperature - 32.0) / 1.8)
         }
@@ -85,9 +87,11 @@ class ViewController: UIViewController {
         guard let weight = Double(tf_valor.text!) else {return}
         
         if bt_celsius.alpha == 1.0 {
-            lb_ResultUnit.text = "Kilometro"
+            lb_ResultUnit.isHidden = false
+            lb_ResultUnit.text = "Libra"
             lb_resultado.text = String(weight / 2.2046)
         } else {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Metros"
             lb_resultado.text = String(weight * 2.2046)
     }
@@ -97,9 +101,11 @@ class ViewController: UIViewController {
         guard let currency = Double(tf_valor.text!) else {return}
         
         if bt_celsius.alpha == 1.0 {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Dolar"
             lb_resultado.text = String(currency / 3.5)
         } else {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Real"
             lb_resultado.text = String(currency * 3.5)
         }
@@ -109,9 +115,11 @@ class ViewController: UIViewController {
         guard let distance = Double(tf_valor.text!) else {return}
         
         if bt_celsius.alpha == 1.0 {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Kilometro"
             lb_resultado.text = String(distance / 1000.0)
         } else {
+            lb_ResultUnit.isHidden = false
             lb_ResultUnit.text = "Metros"
             lb_resultado.text = String(distance * 1000.0)
     }
